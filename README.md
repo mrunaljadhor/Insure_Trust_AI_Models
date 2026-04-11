@@ -53,37 +53,37 @@ docker-compose up --build
 
 ```
 ┌─────────────────────────────────────────────────────┐
-│                  Next.js 14 Frontend                 │
+│                  Next.js 14 Frontend                │
 │  ClaimUploader → StreamingProgress → RiskGauge      │
 │  FraudRingGraph (D3.js) ← Most Important Component  │
 │  ShapWaterfall | RFIBadges | AdjusterPanel          │
 └─────────────────┬───────────────────────────────────┘
                   │ SSE + REST API
-┌─────────────────┴───────────────────────────────────┐
-│                FastAPI Backend (8000)                 │
-│                                                      │
+┌─────────────────┴──────────────────────────────────┐
+│                FastAPI Backend (8000)              │
+│                                                    │
 │  ┌─────────┐ ┌──────────┐ ┌──────────┐ ┌─────────┐ │
 │  │ Image   │ │ NLP      │ │ Tabular  │ │ GNN     │ │
 │  │ Stub    │ │ Stub     │ │ Stub     │ │ Stub    │ │
 │  └────┬────┘ └────┬─────┘ └────┬─────┘ └────┬────┘ │
-│       └───────────┼────────────┼─────────────┘      │
-│              ┌────┴────────────┴────┐               │
-│              │  Ensemble Fusion     │               │
-│              │  weighted_sum × 100  │               │
-│              │  + RFI points        │               │
-│              └──────────┬───────────┘               │
-│                         │                            │
+│       └───────────┼────────────┼─────────────┘     │
+│              ┌────┴────────────┴────┐              │
+│              │  Ensemble Fusion     │              │
+│              │  weighted_sum × 100  │              │
+│              │  + RFI points        │              │
+│              └──────────┬───────────┘              │
+│                         │                          │
 │  ┌──────────┐  ┌───────┴──────┐  ┌───────────────┐ │
 │  │ RFI      │  │ Graph Engine │  │ Audit Logger  │ │
 │  │ Engine   │  │ (NetworkX)   │  │ (SQLite)      │ │
 │  │ 10 Rules │  │ Ring Detect  │  │ Append-only   │ │
 │  └──────────┘  └──────────────┘  └───────────────┘ │
-│                                                      │
-│  ┌──────────────────────────────────────────────┐   │
-│  │ Groq LLM (async, non-blocking)               │   │
-│  │ llama-3.1-8b-instant — summaries only        │   │
-│  └──────────────────────────────────────────────┘   │
-└──────────────────────────────────────────────────────┘
+│                                                    │
+│  ┌──────────────────────────────────────────────┐  │
+│  │ Groq LLM (async, non-blocking)               │  │
+│  │ llama-3.1-8b-instant — summaries only        │  │
+│  └──────────────────────────────────────────────┘  │
+└────────────────────────────────────────────────────┘
 ```
 
 ## 🔧 Tech Stack
@@ -156,4 +156,4 @@ npm run dev
 
 ---
 
-**Built for FinTech Hackathon 2025** | IRDAI Anti-Fraud Policy 2025 Compliant
+**Built for FinTech Hackathon 2026** | IRDAI Anti-Fraud Policy 2025 Compliant
